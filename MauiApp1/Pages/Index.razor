@@ -1,0 +1,19 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<br />
+<a href="testFile.txt" download="testFile">DOWNLOAD test.txt</a>
+<br />
+<a href="data:text/plain,Success!" download="testDataUrl">DOWNLOAD data url</a>
+<br />
+<a href="data:text/plain;base64,U3VjY2VzcyE=" download="testDataUrlBase64">DOWNLOAD data url base64</a>
+<br />
+<br />
+<button onclick="window.downloadFileFromStream('testBlobMicrosoft', new Uint8Array([83,117,99,99,101,115,115,33]))">DOWNLOAD blob url (microsoft article)</button>
+<br />
+<button onclick="window.triggerFileDownload('testFileMicrosoft', 'testFile.txt')">DOWNLOAD file (microsoft article)</button>
